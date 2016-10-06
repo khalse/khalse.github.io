@@ -1,9 +1,29 @@
 <html>
   <head>
     <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        var meh = new Object();
+      
+        $.document.ready(function() {
+          var detectIt = function() {
+            var bottomad = $('#bottomAd');
+            if (bottomad.length == 1) {
+              if (bottomad.height() == 0) {
+                alert('woohoo');
+                meh.adblocker = true;
+              } else {
+                meh.adblocker = false;
+              }
+            }
+            
+          };
+          
+          detectIt();
+        });
+    </script>
   </head>
   <body>
     <h2>Heading</h2>
-    <div id="bottomAd" style="font-size: 2px;">&nbsp;</div>
+    <div id="bottomAd" style="font-size: 2px;" class="item-container-ad">&nbsp;</div>
   </body>
 </html>
